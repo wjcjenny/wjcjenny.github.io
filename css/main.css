@@ -10110,6 +10110,25 @@ section.reuters-graphics .pixcenter {
   display: block;
   margin: 0 auto;
 }
+section.reuters-graphics hr.footer {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 8px auto;
+  height: 0;
+  width: 100%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 1px dotted #6d6e71;
+  border-bottom: 1px dotted #bcbec0;
+}
+section.reuters-graphics .copyright {
+  text-align: center;
+  color: #c7c7c7;
+}
 section.reuters-graphics .tablesorter-default .header,
 section.reuters-graphics .tablesorter-default .tablesorter-header {
   background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
