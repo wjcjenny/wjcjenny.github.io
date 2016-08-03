@@ -1,0 +1,51 @@
+/*
+.chart {
+  height: auto !important;
+}
+*/
+
+.arrow{
+  padding-right: 5px;
+    padding-left: 5px;
+}
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5 !important;
+}
+
+.right{
+  float: right;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.sankey-label{
+	float:left;
+	font-weight:600;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: @text-small;
+	&.right{
+		float:right;
+		text-align: left;
+	}
+}
+
+

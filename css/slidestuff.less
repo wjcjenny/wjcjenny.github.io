@@ -1,0 +1,108 @@
+.slide-down{
+	animation-name: slide-down;
+	-webkit-animation-name: slide-down;
+
+	animation-duration: .2s;
+	-webkit-animation-duration: .2s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	-webkit-transform-origin: 100% 0%;
+}
+
+@keyframes slide-down {
+	0% {
+		transform: scaleY(0.3);
+	}
+
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@-webkit-keyframes slide-down {
+	0% {
+		-webkit-transform: scaleY(0.3);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+	}
+}
+
+.slide-up{
+	animation-name: slide-up;
+	-webkit-animation-name: slide-up;
+
+	animation-duration: .2s;
+	-webkit-animation-duration: .2s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+	transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	-webkit-transform-origin: 100% 0%;
+}
+
+@keyframes slide-up {
+	0% {
+		transform: scaleY(1);
+	}
+
+	100% {
+		transform: scaleY(0);
+	}
+}
+
+@-webkit-keyframes slide-up {
+	0% {
+		-webkit-transform: scaleY(1);
+	}
+	100% {
+		-webkit-transform: scaleY(0);
+	}
+}
+
+
+.slide-right{
+    animation-name: slide-right;
+    -webkit-animation-name: slide-right;
+
+    animation-duration: .2s;
+    -webkit-animation-duration: .2s;
+
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -webkit-transform-origin: 0% 50%;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+    }
+}

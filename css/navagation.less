@@ -1,0 +1,335 @@
+//stand-alone shadowy box.
+.shadow-box{
+	width:100%;
+	height:15px;
+	background-color: white;
+	position:relative;
+	&:after{
+		content:"";
+	    position:absolute; 
+	    z-index:-1;
+	    box-shadow:0 0 7px rgba(0,0,0,0.6);
+	    top:6px;
+	    border-radius:100%;
+		height:10px;
+		width:98%;
+		left:1%;
+	}
+
+}
+
+//nav on top
+nav.reuters-graphics-nav{
+	z-index:100000 !important;
+
+	//that shadow thing
+	&:after{
+		content:"";
+	    position:absolute; 
+	    z-index:-1;
+	    box-shadow:0 0 7px rgba(0,0,0,0.6);
+	    top:44px;
+	    border-radius:100%;
+		height:10px;
+		width:98%;
+		left:1%;
+	}
+	
+	//using this to make a white block on top of the shadow
+	.navbar-header{
+		background-color: white;
+
+		//below 600, this needs to not be like this, cause the height hides the drop downy thingy
+		@media(min-width:600px){
+			width:120%;
+			height:53px;
+			position:absolute;
+			left:0px;			
+		}
+
+
+	} 
+
+	//share button thing
+    button.navbar-toggle{
+        border:0;
+        background:initial !important;
+        color:@basic-gray;
+        position:relative;
+        z-index: 100000 !important;
+		float:left;
+		margin-right:0;
+		margin-left:15px;
+		&:hover{
+			color:black;
+		}
+    }
+	
+	//reuters logo
+    a.navbar-brand{
+        padding:15px 0 0 15px;
+	    
+	    //center on the smally
+		@media (max-width: 600px){
+            position:absolute;
+            left:~"calc(50% - 120px)";
+		}
+
+        img{
+            max-width: 100%;
+            width:200px;
+        }
+    }
+
+	//drop down share buttons list
+    ul.device-share{
+        list-style:none;
+        margin:5px auto 20px auto;
+        padding:3px 0 30px 0;
+        li{
+            float:left;
+            margin:5px 6px;
+            vertical-align: middle;
+            font-size:@text-large;
+            &:first-of-type{
+                margin-left:0;
+            }
+            &:last-of-type{
+                margin-right:0;
+            }
+            a{
+				color:@basic-gray;
+                &:hover{
+	                color:@orange3;
+                }
+            }
+        }
+    }
+    
+    
+   
+}
+
+
+nav.navbar-lower{
+	background-image: none !important;
+	background:none !important;
+    box-shadow: none;
+	position:relative;
+	top:20px;
+	height:auto !important;
+    border:none;
+    padding-bottom: 10px;    
+ 	background-color: none !important;
+   // border-bottom: 1px solid #EEE;
+
+	//small version gets a rule above and below
+	@media (max-width:600px){
+		border-top:1px solid @basic-gray;
+		border-bottom:1px solid @basic-gray;
+		border-radius: 0px;
+	}  
+	    
+    &.stick {
+	    position: fixed;
+	    left:0px;
+	    top: 70px;
+	    z-index: 99999;
+	    width:100%;
+	    border-bottom: 1px solid @light-gray;
+	    background-color: white !important;
+		//hamburger version is a bit different
+		@media (max-width:601px){
+			margin-top: -20px;	
+			margin-bottom: -20px;
+			border-radius: 0px !important;	
+		}	
+		//and then on phone, it's totally different
+		@media (max-width: 480px){
+			margin-top: 0px;
+			top:0px;
+			z-index:100000;
+			background-color: none;
+			background: none;
+			border-bottom: none;
+			border-top: none;
+			width:~"calc(100% - 55px)";
+			left:55px;
+			overflow-x: visible;
+		}
+		//make the section label dissapear when stuck on phone
+		a.navbar-brand{
+			@media (max-width: 480px){
+				display:none !important;		
+			}
+		}
+		//doing weird ju-jitsu
+		.navbar-collapse.lower{
+			background-color: white !important;
+			@media (max-width: 480px){
+				width:~"calc(100% + 85px)";
+				left:-55px;
+				position: relative;
+			}
+		}
+
+		//buttons go down on stick
+		ul.navbar-nav{	 
+	        > li{
+	            @media (min-width: 600px){
+	                margin-top:15px;
+	            }
+	
+	        }	
+	    }
+
+
+			
+	}
+	
+	@media (max-width: 599px){
+		margin-top: 20px;
+	}
+	@media (min-width:600px){
+		background-color: none ;
+		margin-top: -20px;	
+		margin-bottom: -20px;	
+	}
+
+
+	//the hamburger
+    button.navbar-toggle{
+        border:0;
+        background:initial !important;
+        position:relative;
+        z-index: 1000000;
+    }
+
+	//Choose a section bit
+    a.navbar-brand{
+        padding:15px 0 0 15px;
+        margin:0 auto 0 auto !important;
+        position:absolute;
+        float:none;
+	    width: 100%;
+	    text-align: center;
+	    text-transform: uppercase;
+		@media (max-width: 480px){
+			text-align: left;
+		}
+	
+    }
+    
+    //the main buttons
+    ul.navbar-nav{
+        @media (min-width: 600px){
+            height:50px;   
+            text-align: center;
+            float: none;   
+        }
+ 
+        > li{
+            @media (min-width: 600px){
+                margin-top:10px;
+                height:35px;
+                border: 1px solid @basic-gray;
+                padding-top:8px;               
+                float:none;
+                display:inline-block;
+                text-align: center;
+            }
+
+            font-family:@copy;
+            font-weight:400;
+            text-transform: uppercase;
+
+			//take all of that decoration off of all of the anchor tags
+			a{
+			    background:none !important;
+                background-image: none !important;
+				background-color: none !important;
+                filter: none !important;
+                background-repeat: no-repeat !important;
+                box-shadow: none !important;
+                outline: 0 !important;
+			}
+
+			//when li is clicked.  make sure anchor doesn't do anything weird
+            &.active{
+                background-color: black;
+                color:white;
+                border: 1px solid black;
+                a{
+                    color:white !important;
+                    &:hover{
+					   color:white !important;
+					}
+                }
+                &:hover{
+	                a{
+		                color:white !important;
+	                }
+                }
+            }
+            
+            //when LI is hovered.  again, anchor is werid
+            &:hover{
+	            border: 1px solid black;
+	            a{
+		            color:black !important;
+	            }
+            }
+            //when li is not clicked.
+            &.inactive{
+                a{
+	                color:@light-gray !important;
+	            }
+            }
+
+            > a{
+                @media (min-width: 600px){
+                    height:20px;
+                    margin-top:-18px;
+                    margin-bottom:10px;
+                }
+                @media (max-width:600px){
+                    padding:5px 15px;
+                }
+            }
+
+        }
+
+    }
+}
+
+  ul.inline-share{
+  
+    list-style:none;
+    border-left:1px solid @light-gray;
+    padding-left: 15px;
+    padding-top:5px;
+    margin-left: -5px;
+    position:relative !important;
+    right:auto;
+    top:5px;
+    display:inline-block;
+    vertical-align: center;
+
+
+    li{
+        float:left;
+        margin-right: 10px;
+        font-size:@text-large;           
+        a{
+		    color: @light-gray;
+            &:hover{
+                text-shadow: none;
+                color:black;
+            }
+        }
+    }
+}
+
+a{
+    outline: 0 !important;
+}
