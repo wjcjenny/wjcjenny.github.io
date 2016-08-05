@@ -38,7 +38,19 @@ nav.reuters-graphics-nav{
 	//using this to make a white block on top of the shadow
 	.navbar-header{
 		background-color: white;
-
+		position:relative;
+		.yellowBar{
+			position:absolute;
+			width:100%;
+			height:45px;
+			background-color:@yellow4;
+			top:10px;
+			
+			@media(max-width:600px){
+				top:0px;
+				height:54px;
+			}
+		}
 		//below 600, this needs to not be like this, cause the height hides the drop downy thingy
 		@media(min-width:600px){
 			width:120%;
@@ -65,22 +77,7 @@ nav.reuters-graphics-nav{
 		}
     }
 	
-	//reuters logo
-    a.navbar-brand{
-        padding:15px 0 0 15px;
-	    
-	    //center on the smally
-		@media (max-width: 600px){
-            position:absolute;
-            left:~"calc(50% - 120px)";
-		}
-
-        img{
-            max-width: 100%;
-            width:200px;
-        }
-    }
-
+	
 	//drop down share buttons list
     ul.device-share{
         list-style:none;
@@ -142,15 +139,15 @@ nav.navbar-lower{
 		@media (max-width:601px){
 			margin-top: -20px;	
 			margin-bottom: -20px;
-			border-radius: 0px !important;	
+			border-radius: 0px !important;
 		}	
 		//and then on phone, it's totally different
 		@media (max-width: 480px){
 			margin-top: 0px;
 			top:0px;
 			z-index:100000;
-			background-color: none;
-			background: none;
+			background-color: none !important;
+			background: none !important;
 			border-bottom: none;
 			border-top: none;
 			width:~"calc(100% - 55px)";
@@ -158,11 +155,7 @@ nav.navbar-lower{
 			overflow-x: visible;
 		}
 		//make the section label dissapear when stuck on phone
-		a.navbar-brand{
-			@media (max-width: 480px){
-				display:none !important;		
-			}
-		}
+		
 		//doing weird ju-jitsu
 		.navbar-collapse.lower{
 			background-color: white !important;
@@ -226,6 +219,7 @@ nav.navbar-lower{
             height:50px;   
             text-align: center;
             float: none;   
+
         }
  
         > li{
@@ -233,6 +227,7 @@ nav.navbar-lower{
                 margin-top:10px;
                 height:35px;
                 border: 1px solid @basic-gray;
+                border-radius: 80px 80px 80px 80px;
                 padding-top:8px;               
                 float:none;
                 display:inline-block;
@@ -256,9 +251,9 @@ nav.navbar-lower{
 
 			//when li is clicked.  make sure anchor doesn't do anything weird
             &.active{
-                background-color: black;
-                color:white;
-                border: 1px solid black;
+                background-color: #e6e600;
+                /*color:white;*/
+                /*border: 1px solid black;*/
                 a{
                     color:white !important;
                     &:hover{
@@ -274,9 +269,9 @@ nav.navbar-lower{
             
             //when LI is hovered.  again, anchor is werid
             &:hover{
-	            border: 1px solid black;
+	            border: 1px solid ;
 	            a{
-		            color:black !important;
+		            color:#e6e600 !important;
 	            }
             }
             //when li is not clicked.
@@ -332,4 +327,16 @@ nav.navbar-lower{
 
 a{
     outline: 0 !important;
+}
+
+ul li a i {
+  /*background: #205D7A;*/
+  color: @navy4;
+  width: 40px;
+  height: 40px;
+  /*border-radius: 20px;*/
+  font-size: 25px;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 15%;
 }
