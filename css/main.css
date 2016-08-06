@@ -9748,8 +9748,6 @@ section.reuters-graphics nav.navbar-lower ul.navbar-nav > li {
   section.reuters-graphics nav.navbar-lower ul.navbar-nav > li {
     margin-top: 10px;
     height: 35px;
-    border: 1px solid #a7a9ac;
-    border-radius: 80px 80px 80px 80px;
     padding-top: 8px;
     float: none;
     display: inline-block;
@@ -9768,8 +9766,6 @@ section.reuters-graphics nav.navbar-lower ul.navbar-nav > li a {
 }
 section.reuters-graphics nav.navbar-lower ul.navbar-nav > li.active {
   background-color: #e6e600;
-  /*color:white;*/
-  /*border: 1px solid black;*/
 }
 section.reuters-graphics nav.navbar-lower ul.navbar-nav > li.active a {
   color: white !important;
@@ -9779,9 +9775,6 @@ section.reuters-graphics nav.navbar-lower ul.navbar-nav > li.active a:hover {
 }
 section.reuters-graphics nav.navbar-lower ul.navbar-nav > li.active:hover a {
   color: white !important;
-}
-section.reuters-graphics nav.navbar-lower ul.navbar-nav > li:hover {
-  border: 1px solid ;
 }
 section.reuters-graphics nav.navbar-lower ul.navbar-nav > li:hover a {
   color: #e6e600 !important;
