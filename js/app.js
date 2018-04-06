@@ -2,18 +2,14 @@
 $(document).ready(function(){
 	"use strict";
 
-	// load flliping book
-  //   var mobileLine = '<iframe src="http://dataviz.nbcnews.com/examples/timeline-flipbook/" style="width: 1px; min-width: 100%; *width: 100%;" width="100%" height="580" frameborder="0" scrolling="no"></iframe>';
-  //   var pcLine = '<iframe src="http://dataviz.nbcnews.com/examples/timeline-flipbook/" style="width: 1px; min-width: 100%; *width: 100%;" width="100%" height="380" frameborder="0" scrolling="no"></iframe>';
-    
-  //   $('#special').html(pcLine);
-  //   if($(window).width() < 768){
-		// $('#special').html(mobileLine);
-  //   }
+
     
 
 	$('#about').show();
 	
+
+
+
 	// Code for buttons to load each sections
 	$('.bttn').click(function(){
         $('.bttn').removeClass('active');
@@ -67,41 +63,135 @@ $(document).ready(function(){
 
 	
 	// Code for dropdown to load each sections
-	 $('#inds').on('change',function(){
-        var index=$(this).find(':selected').index();
+	 // $('#sticky').on('change',function(){
+  //       var index=$(this).find(':selected').index();
+		// console.log("hahahah")
+  //       if(index === 0){
+  //           $('#about').show();
+		// 	$('#interactive').hide();
+		// 	$('#infographics').hide();
+		// 	$('#code').hide();
+		// 	$('#story').hide();
+  //       }else if(index === 1){
+  //          $('#about').hide();
+		// 	$('#interactive').show();
+		// 	$('#infographics').hide();
+		// 	$('#code').hide();
+		// 	$('#story').hide();
+  //       }else if(index === 2){
+  //          $('#about').hide();
+		// 	$('#interactive').hide();
+		// 	$('#infographics').show();
+		// 	$('#code').hide();
+		// 	$('#story').hide();
+  //       }else if(index === 3){
+  //           $('#about').hide();
+		// 	$('#interactive').hide();
+		// 	$('#infographics').hide();
+		// 	$('#code').show();
+		// 	$('#story').hide();
+  //       }else if(index === 4){
+  //          	$('#about').hide();
+		// 	$('#interactive').hide();
+		// 	$('#infographics').hide();
+		// 	$('#code').hide();
+		// 	$('#story').show();
+  //       }
+  //   });
 		
-        if(index === 0){
+		// var windowSize = $(window).width();
+	 //    if (windowSize <= 650) {
+            
+  //       }
+
+	$('ul.nav li a').on('click', function(event){
+		
+		event.preventDefault();
+	
+		$('body, html').animate({ scrollTop: 0 });
+    	
+		var $el = $(this);
+	
+        var id = $el.attr('href');
+		
+		id = id.replace("#","")
+		route(id);	
+	});
+
+	var offsetTop = 108;
+
+	function sticky_relocate() {
+	    var window_top = $(window).scrollTop();
+	    var div_top = $('#sticky-anchor').offset().top-70;
+	    if (window_top > div_top) {
+	        $('#sticky').addClass('stick');
+	    } else {
+	        $('#sticky').removeClass('stick');
+	    }
+	}
+		
+	$(function () {
+	    $(window).scroll(sticky_relocate);
+	    sticky_relocate();
+	});
+		
+
+   function route(id){			
+		var $el = $( "a[href='#"+id+"']" ).parent()
+		
+		var title = $( "a[href='#"+id+"']" ).html()
+		if( $el.hasClass('active') ){
+            return;
+        }	
+		d3.select("#section-label")
+			.html(title)
+		
+		
+		$el.addClass('active')
+			.siblings()
+			.removeClass('active');
+		$("#navbar").collapse('hide')
+
+	
+        $('section.graphic-section.selected').removeClass('selected');		
+		$("#"+id).addClass('selected');							
+		
+
+		if(id === "about"){
             $('#about').show();
 			$('#interactive').hide();
 			$('#infographics').hide();
 			$('#code').hide();
 			$('#story').hide();
-        }else if(index === 1){
+        }else if(id === "interactive"){
            $('#about').hide();
 			$('#interactive').show();
 			$('#infographics').hide();
 			$('#code').hide();
 			$('#story').hide();
-        }else if(index === 2){
+        }else if(id === "infographics"){
            $('#about').hide();
 			$('#interactive').hide();
 			$('#infographics').show();
 			$('#code').hide();
 			$('#story').hide();
-        }else if(index === 3){
+        }else if(id === "code"){
             $('#about').hide();
 			$('#interactive').hide();
 			$('#infographics').hide();
 			$('#code').show();
 			$('#story').hide();
-        }else if(index === 4){
+        }else if(id === "story"){
            	$('#about').hide();
 			$('#interactive').hide();
 			$('#infographics').hide();
 			$('#code').hide();
 			$('#story').show();
         }
-    });
+   }
+
+
+	
 });
 
   

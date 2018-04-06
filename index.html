@@ -23,7 +23,9 @@
         <section class="content main-graphics">
             <nav class="graphics-nav navbar" role="navigation">
                     <div class="navbar-header">
-                        <div class="yellowBar"></div>
+                        <div class="yellowBar">
+                            
+                        </div>
                             
                     </div>    
             </nav>
@@ -43,6 +45,49 @@
                 </div>
             </div>
             
+
+            <div class="container phonevisible" >
+                <div id="sticky-anchor"></div>
+               
+                <nav id="sticky" class="navbar navbar-default navbar-lower">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle lower collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a id="section-label" class="navbar-brand" href="#">Choose a section ...</a>
+                      </div>
+                      <div id="navbar" class="navbar-collapse lower collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#about">About Me</a>
+                            </li>
+
+                            <li>
+                                <a href="#interactive">Interactive Graphics</a>
+                            </li>
+
+                            <li>
+                                <a href="#infographics">Infographics</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#code">Nerdy Code</a>
+                            </li>     
+                            
+                            <li>
+                                <a href="#story">Stories</a>
+                            </li>
+                                                                                                                                                                
+                        </ul>
+                      </div>
+                    </div>
+                </nav>
+            </div>
+
             <div class="container">
                 <div class="row">
                     <div class="main-content col-md-8 col-md-offset-2">
@@ -60,20 +105,6 @@
                                 
                             </div>
                         </div>
-
-                        <!-- dropdown menue here -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <select id="inds" class="dropbt phonevisible">
-                                    <option value="about" selected="selected">About me</option>
-                                    <option value="interactive">Interactive graphics</option>
-                                    <option value="infographics">Infographics</option>
-                                    <option value="code">Nerdy code</option>
-                                    <option value="stories">Stories</option>
-                                </select>
-                            </div>
-                        </div>
-
 
                         <!-- main content -->
                         <div class="row">
@@ -102,7 +133,67 @@
                                 <section class="graphic-section" id="interactive">
                                     <br>
                                     <p><br class="hidden-xs"></p>
+
+                                    <div class="row">
+                                        <div class="col-sm-6 col-xs-12">
+                                            <h3>March walk outs</h3>
+                                            <div class="hidden-xs"><br></div>
+                                            <p class="tool">#python #QGIS #jQuery #JavaScript #jQuery #Illustrator</p>
+                                            <p><a href="http://dataviz.nbcnews.com/projects/march-walk-outs/"  target="_blank">This package</a> is one of projects we published for National School Walkout on March 13.</p>
+                                            <p>We started to design it from combining all school and organization names across the country that are joining in school walkouts in honor of those who died in the Parkland, Florida.</p>
+                                            
+                                        </div>
+                                        <p><br class="hidden-xs"></p>
                                     
+                                        <div class="col-sm-6 col-xs-12">
+                                            <a href="http://dataviz.nbcnews.com/projects/march-walk-outs/" target="_blank"><img class="img-responsive" src="img/walkout.gif" alt="walkout"></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <p>First, I write scripts to geocode all the school names based on google map api. You may find code <a href="https://github.com/wjcjenny/geocode-march-walk-outs"  target="_blank">on github</a>. </p>
+                                            <p>Then I import a new dataset with coordinates into QGIS and get those dots on map. Meanwhile, we use this datasets to make a table which allow readers to filter their own states.</p>
+                                            <p>BUT we felt that asking readers to manually choose a state is not that ideal. So we default the state for readers while they open the page by locating and identifying their IP addresses.</p>
+                                        </div>
+                                    </div>
+
+                                    <p class="hidden-xs"><br></p>
+                                    <p><hr></p>
+                                    <p><br></p>
+
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-12">
+                                            <h3>Water in Cape town</h3>
+                                            <a href="http://dataviz.nbcnews.com/projects/capetown-water/" target="_blank"><img class="img-responsive" src="img/water.gif" alt="water"></a>
+                                            <p class="tool">#jQuery #JavaScript #Bootstrap</p>
+                                            <p><a href="http://dataviz.nbcnews.com/projects/capetown-water/"  target="_blank">This graphic</a> is published for <a href="https://www.nbcnews.com/news/world/cape-town-s-day-zero-pushed-back-water-crisis-takes-n853616"  target="_blank">Cape Town's Day Zero pushed back, but water crisis takes a toll</a>. Play with it to explore how much water you are using a day and the amount that people allow to use in Cape Town.</p>
+                                            <div class="visible-xs"><br><br></div>
+                                        </div>
+                                            
+                                        <div class="col-sm-4 col-xs-12">
+                                            <h3>Syria torture</h3>
+                                            <a href="http://dataviz.nbcnews.com/projects/syria-torture/" target="_blank"><img class="img-responsive" src="img/syria.gif" alt="syria"></a>
+                                            <p class="tool">#jQuery #JavaScript</p>
+                                            <p>WARNING GRAPHIC PHOTOS: These are graphic with upsetting images. Photo editors come to us with those images and seek for appropriate ways to present them.</p>
+                                            <p><a href="http://dataviz.nbcnews.com/projects/syria-torture/"  target="_blank">This graphic</a> is part of <a href="http://dataviz.nbcnews.com/projects/syria-torture/"  target="_blank">Investigators quietly probe allegations of Syrian war crimes</a>.</p>
+                                            <div class="visible-xs"><br><hr><br></div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4 col-xs-12">
+                                            <h3>Child gun analysis</h3>
+                                            <a href="https://dataviz.nbcnews.com/examples/step-viz/" target="_blank"><img class="img-responsive" src="img/child.gif" alt="child"></a>
+                                            <p class="tool">#D3.js #jQuery #Bootstrap #JavaScript</p>
+                                            <p>History data visualization for <a href="https://www.nbcnews.com/news/us-news/sandy-hook-nearly-1-000-kids-have-died-guns-n829486" target="_blank">Since Sandy Hook, nearly 1,000 kids under the age of 12 have died from guns</a>.</p>
+                                            <div class="visible-xs"><br><hr><br></div>
+                                        </div>
+                                    </div>
+
+
+                                    <p class="hidden-xs"><br></p>
+                                    <p><hr></p>
+                                    <p><br></p>
+
+
                                     <div class="row">
                                         <div class="col-sm-7 col-xs-12">
                                             <h3>State of the Union Address</h3>
@@ -114,7 +205,6 @@
                                             <p>I also run text analysis with tokenizers and tidyverse in R for each president's speech and try to find what they talked every year. Click key themes above to find out my methodology.</p>
                                         </div>
                                         <div class="col-sm-5 col-xs-12">
-                                            <p class="hidden-xs"><br><br><br></p>
                                             <a href="http://dataviz.nbcnews.com/projects/sotu-duration/" target="_blank"><img class="img-responsive" src="img/sotuduration.gif" alt="sotuduration"></a>
                                         </div>
                                     </div>
@@ -155,18 +245,27 @@
 
 
                                     <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <h3>Child gun analysis</h3>
-                                            <a href="https://dataviz.nbcnews.com/examples/step-viz/" target="_blank"><img class="img-responsive" src="img/child.gif" alt="child"></a>
-                                            <p class="tool">#D3.js #jQuery #Bootstrap #JavaScript</p>
-                                            <p>History data visualization for <a href="https://www.nbcnews.com/news/us-news/sandy-hook-nearly-1-000-kids-have-died-guns-n829486" target="_blank">Since Sandy Hook, nearly 1,000 kids under the age of 12 have died from guns</a>.</p>
-                                            <div class="visible-xs"><br><hr><br></div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
+                                        <div class="col-sm-4 col-xs-12">
                                             <h3>Sheep quiz</h3>
-                                            <a href="http://dataviz.nbcnews.com/projects/sheep-quiz/" target="_blank"><img class="img-responsive" src="img/sheep.gif" alt="sheep"></a>
+                                            <div class="hidden-xs"><br></div>
+                                            <a href="https://dataviz.nbcnews.com/projects/sheep-quiz/" target="_blank"><img class="img-responsive" src="img/sheep.gif" alt="sheep"></a>
                                             <p class="tool">#jQuery #Bootstrap #JavaScript</p>
                                             <p>This is a small quiz within <a href="https://www.nbcnews.com/mach/science/dogs-can-t-speak-human-here-s-tech-could-change-ncna836811" target="_blank">Dogs can't speak human. Here's the tech that could change that</a> at NBC featured section <a href="https://www.nbcnews.com/mach " target="_blank">Mach</a>.</p>
+                                        </div>
+
+                                        <div class="col-sm-4 col-xs-12">
+                                            <h3>Biggest airplane</h3>
+                                            <div class="hidden-xs"><br></div>
+                                            <a href="https://dataviz.nbcnews.com/projects/stratolaunch-comparison/" target="_blank"><img class="img-responsive" src="img/bigairplane.gif" alt="plane"></a>
+                                            <p class="tool">#jQuery #Illustrator #JavaScript</p>
+                                            <p>A comparison graphics for selected airplanes within <a href="https://www.nbcnews.com/mach/science/world-s-biggest-plane-stratolaunch-marks-another-key-milestone-ncna851556" target="_blank">World's biggest plane, Stratolaunch, marks another key milestone</a> at <a href="https://www.nbcnews.com/mach " target="_blank">Mach</a>.</p>
+                                        </div>
+
+                                         <div class="col-sm-4 col-xs-12">
+                                            <h3>Large object reenter earth</h3>
+                                            <a href="http://dataviz.nbcnews.com/projects/china-space-station/" target="_blank"><img class="img-responsive" src="img/tiangong.gif" alt="tiangong"></a>
+                                            <p class="tool">#jQuery #DataTables #JavaScript</p>
+                                            <p>A table listing those large obejcts re-enter to the earth for <a href="https://www.nbcnews.com/mach/science/space-station-falling-earth-here-s-where-it-could-land-ncna838481" target="_blank">A space station is falling to Earth</a> at <a href="https://www.nbcnews.com/mach " target="_blank">Mach</a>.</p>
                                         </div>
                                     </div>
                                     
@@ -324,13 +423,20 @@
 
                                         <!-- jiachuan -->
 
-                                        <div class="col-sm-4 col-xs-12">
+                                        <!-- <div class="col-sm-4 col-xs-12">
                                             <h3>News quiz: DOES THIS CAUSE CANCER IN HUMANS?</h3>
                                             <div class="hidden-xs"><br></div>
                                             <a href="http://tmsnrt.rs/1SPpjgm" target="_blank"><img class="img-responsive" src="img/quiz.gif" alt="Quiz"></a>
                                             <p class="tool">#jQuery #Bootstrap #Backbone.js</p>
                                             <p>It's my first project in Reuters! This graphic comes with a special report about <a href="http://www.reuters.com/investigates/special-report/health-who-iarc/"  target="_blank">How the World Health Organization's cancer agency confuses consumers</a>. This is also where I practiced jQuery: sibiling/parent, removeClass and on click function. Play with it <a href="http://tmsnrt.rs/1SPpjgm"  target="_blank">here</a>!</p>
-                                            <!-- <div class="visible-xs"><br><hr><br></div> -->
+                                        </div> -->
+                                        <div class="col-sm-4 col-xs-12">
+                                            <h3>Oil and gas bankruptcies in North America</h3>
+                                            <div class="hidden-xs"><br></div>
+                                            <a href="http://tmsnrt.rs/252EH1l" target="_blank"><img class="img-responsive" src="img/oilgas.gif" alt="oilgas"></a>
+                                            <p class="tool">#jQuery #Bootstrap #Backbone.js</p>
+                                            <p>In <a href="http://tmsnrt.rs/252EH1l"  target="_blank">this graphic</a>, the number in right box is live with a data sheet, thanks jQuery. Oh! Check the mobile version of it, col-pull and col-push is my best friend now when I need to position all my div!</p>
+                                            <div class="visible-xs"><br><hr><br></div>
                                         </div>
                                     </div>
 
@@ -339,14 +445,7 @@
                                     <p><br></p>
 
                                     <div class="row">
-                                       <div class="col-sm-4 col-xs-12">
-                                            <h3>Oil and gas bankruptcies in North America</h3>
-                                            <div class="hidden-xs"><br></div>
-                                            <a href="http://tmsnrt.rs/252EH1l" target="_blank"><img class="img-responsive" src="img/oilgas.gif" alt="oilgas"></a>
-                                            <p class="tool">#jQuery #Bootstrap #Backbone.js</p>
-                                            <p>In <a href="http://tmsnrt.rs/252EH1l"  target="_blank">this graphic</a>, the number in right box is live with a data sheet, thanks jQuery. Oh! Check the mobile version of it, col-pull and col-push is my best friend now when I need to position all my div!</p>
-                                            <div class="visible-xs"><br><hr><br></div>
-                                        </div>
+                                       
                                         <div class="col-sm-4 col-xs-12">
                                             <h3>World Population Mapping</h3>
                                             <div class="hidden-xs"><br></div>
@@ -376,7 +475,7 @@
                                             <p>This is my static graphic describe how farmers get a chance to sace the seeds from Stine Seed step by step.</p>
                                             <p>Here is the link: <a href="http://tmsnrt.rs/2dy49Jl">http://tmsnrt.rs/2dy49Jl</a></p>
                                         </div>
-                                        <div class="col-sm-8 col-xs-12">
+                                        <div class="col-sm-9 col-xs-12">
                                             <a href="http://tmsnrt.rs/2dy49Jl"><img class="img-responsive" src="img/seeds.jpg"></a>
                                             <div class="visible-xs"><br><br></div>
                                         </div>
@@ -421,11 +520,18 @@
                                                 <div class="col-sm-6 col-xs-12">
                                                     <p class="github">You may find it with a video now published on <a href="http://voices.nationalgeographic.com/2015/06/07/oil-spill-impacts-the-developing-hearts-of-fish/" target="_blank">National Geographic</a></p>
                                                     <p>This an Applied Visual Science Lab project. I and my team developed an explanatory graphics and video about the effects of oil spills in Gulf Mexico on the health of deep water fish by using the real marine research paper, “Deep-water Horizon crude oil impacts the developing hearts of large predatory pelagic fish (PNAS)”.</p>
+                                                </div>
+                                                <div class="col-sm-6 col-xs-12">
+                                                    <a href="img/static1-1.jpg"><img class="pixcenter img-responsive" src="img/static1-1.jpg"></a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+
                                                     <p>A little over five years ago, the Deepwater Horizon oil spill in the Gulf of Mexico released more than 636 million litres of crude oil. </p>
                                                     <p>The oiled covered spawning areas for many commercially and ecologically important fishes. Accordingly, the impacts of the oil on the development of fishes was a major concern. To investigate this, researchers studied the impacts of field-collected Deepwater Horizon (MC252) oil samples on embryo development of bluefin tuna, yellowfin tuna and amberjack fishes.</p>
                                                     <p>Below are sketches and how we made it after thousands of editions before it finally got published! </p>
                                                 </div>
-                                                <div class="col-sm-6 col-xs-12"><a href="img/static1-1.jpg"><img class="pixcenter img-responsive" src="img/static1-1.jpg"></a></div>
                                             </div>
                                         </div>
 
@@ -726,6 +832,8 @@
         
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/d3.js"></script>
+        <!-- <script src="js/backbone.js"></script> -->
         <script src="js/app.js"></script>
         
         
