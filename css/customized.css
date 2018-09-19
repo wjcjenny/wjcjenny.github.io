@@ -196,7 +196,19 @@ h3{
     margin-top: 0px;
     font-family: 'Source Sans Pro';
   }
-
+.special{
+  font-weight: 300;
+  text-transform: none;
+  font-size:1em !important;
+  color:white;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background: #999999;
+}
+.clear{
+  margin-bottom: 0px;
+}
 p{
   font-size:1.2em !important;
   font-family: 'Source Sans Pro';
@@ -320,6 +332,8 @@ img{
   display: none!important;
 }
 
+
+
 @media all and (min-width: 700px) and (max-width: 768px) {
     .specialPc{
       display: none!important;
@@ -394,3 +408,5 @@ hr.footer{
   text-align: center;
   color: #c7c7c7
 }
+
+
