@@ -28,6 +28,18 @@ $(document).ready(function(){
 		$('#code').hide();
 		$('#story').hide();
 	});
+
+	$('.aboutExternal').on( 'click', function() {
+		$('#about').hide();
+		$('#interactive').show();
+		$('#infographics').hide();
+		$('#code').hide();
+		$('#story').hide();
+		
+		$('.bttn').removeClass('active');
+		$('#rect1').addClass('active');
+	});
+	
 	$('#rect2').on( 'click', function() {
 		$('#about').hide();
 		$('#interactive').hide();
