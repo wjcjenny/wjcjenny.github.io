@@ -206,6 +206,26 @@ h3{
   padding-right: 4px;
   background: #999999;
 }
+.environment{
+  font-weight: 300;
+  text-transform: none;
+  font-size:1em !important;
+  color:white;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background: #999999;
+}
+.covid{
+  font-weight: 300;
+  text-transform: none;
+  font-size:1em !important;
+  color:white;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background: #999999;
+}
 .clear{
   margin-bottom: 0px;
 }
